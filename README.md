@@ -1,3 +1,4 @@
+<img width="851" height="315" alt="Design sans titre (1)" src="https://github.com/user-attachments/assets/5351cc13-1e66-4759-a992-86944261db15" />
 <div align="center">
 
 # ✦ Portfolio : Brenda Pollagba ✦
