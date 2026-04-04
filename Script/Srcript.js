@@ -31,9 +31,9 @@ async function loadLayout() {
 
     // Charger les 3 fichiers HTML en même temps
     const [footerRes, aboutRes, projectsRes] = await Promise.all([
-      fetch("Footer.html"),
-      fetch("About_me.html"),
-      fetch("Project.html"),
+      fetch("/Pages/Footer.html"),
+      fetch("/Pages/About_me.html"),
+      fetch("/Pages/Project.html"),
     ]);
 
     if (!aboutRes.ok || !projectsRes.ok || !footerRes.ok) return;
