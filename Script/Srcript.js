@@ -229,13 +229,32 @@ function changeLanguage(lang) {
 // ============================================================
 
 function switchTechImages(isDark) {
-  document.querySelectorAll("img[data-dark-src]").forEach((img) => {
+  // Précharger toutes les images avant de les afficher
+  const imgs = document.querySelectorAll("img[data-dark-src]");
+  const srcs = Array.from(imgs).map((img) => {
     if (isDark) {
       if (!img.dataset.lightSrc) img.dataset.lightSrc = img.src;
-      img.src = img.getAttribute("data-dark-src");
-    } else if (img.dataset.lightSrc) {
-      img.src = img.dataset.lightSrc;
+      return img.getAttribute("data-dark-src");
+    } else {
+      return img.dataset.lightSrc || null;
     }
+  });
+
+  // Attendre que toutes les images soient chargées puis tout switcher d'un coup
+  const loads = srcs.map(
+    (src) =>
+      new Promise((resolve) => {
+        if (!src) return resolve();
+        const preload = new Image();
+        preload.onload = preload.onerror = resolve;
+        preload.src = src;
+      }),
+  );
+
+  Promise.all(loads).then(() => {
+    imgs.forEach((img, i) => {
+      if (srcs[i]) img.src = srcs[i];
+    });
   });
 }
 
