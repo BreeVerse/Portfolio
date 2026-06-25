@@ -36,7 +36,7 @@ body {
   background-size: 100%;
   background-attachment: scroll;
   background-position: top left;
-  min-height: 100vh;
+  min-height: 100dvh;
   width: 100%;
   color: #000000;
   display: flex;
@@ -84,7 +84,7 @@ section {
 
 #hero {
   position: relative;
-  height: 100vh;
+  height: 100dvh;
   width: 100%;
 }
 
@@ -92,7 +92,6 @@ section {
 .hero-banner {
   display: flex;
   align-items: flex-start;
-  padding: clamp(1rem, 3vh, 2rem) clamp(1rem, 3vw, 2.5rem);
   position: relative;
   overflow: hidden;
 }
@@ -542,7 +541,7 @@ p.about-text {
 /* Certifications modale */
 .certif-modal-box {
   width: min(700px, 95vw);
-  max-height: 92vh;
+  max-height: 92dvh;
   padding: 2rem;
   display: flex;
   flex-direction: column;
@@ -603,7 +602,7 @@ p.about-text {
 
 .certif-slide img {
   width: 100%;
-  max-height: min(52vh, 400px);
+  max-height: min(52dvh, 400px);
   object-fit: contain;
   border-radius: 12px;
   cursor: pointer;
@@ -795,7 +794,7 @@ p.tech-label {
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100vh;
+  height: 100dvh;
   background: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(4px);
   display: flex;
@@ -816,7 +815,7 @@ p.tech-label {
   border-radius: 20px;
   width: min(920px, 95vw);
   min-height: 300px;
-  max-height: 88vh;
+  max-height: 88dvh;
   overflow: hidden;
   position: relative;
   z-index: 1;
@@ -1127,7 +1126,7 @@ body.dark-theme .tech-card {
   background: rgba(0, 0, 0, 0.075);
 }
 
-/* Projects */
+/* Projets */
 body.dark-theme .project-square {
   border-color: rgba(243, 240, 247, 0.4);
 }
@@ -1354,7 +1353,7 @@ body.dark-theme .footer-text {
   }
 
   .certif-slide img {
-    max-height: 46vh;
+    max-height: 46dvh;
   }
 
   .modal-body {
@@ -1450,7 +1449,7 @@ body.dark-theme .footer-text {
   }
 
   .certif-slide img {
-    max-height: 40vh;
+    max-height: 40dvh;
   }
 }
 
