@@ -994,7 +994,8 @@ p.tech-label {
 }
 
 .modal-github,
-.modal-deploy {
+.modal-deploy,
+.modal-docs {
   align-self: flex-start;
   border: 1px solid rgba(0, 0, 0, 0.671);
   background: rgba(0, 0, 0, 0.075);
