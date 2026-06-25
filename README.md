@@ -1,7 +1,8 @@
-<img width="851" height="315" alt="Design sans titre (1)" src="https://github.com/user-attachments/assets/5351cc13-1e66-4759-a992-86944261db15" />
+<img width="851" height="315" alt="Bannière du portfolio de Brenda Pollagba" src="https://github.com/user-attachments/assets/5351cc13-1e66-4759-a992-86944261db15" />
+
 <div align="center">
 
-# ✦ Portfolio : Brenda Pollagba ✦
+# ִ໋❀𓍢˖˚ Portfolio : Brenda Pollagba ˚˖𓍢ִ໋❀
 
 **Développeuse Web Full-Stack**
 
@@ -9,84 +10,76 @@
 [![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)](https://developer.mozilla.org/fr/docs/Web/CSS)
 [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)](https://developer.mozilla.org/fr/docs/Web/JavaScript)
 
-🌸 **[brendapollagba.dev](https://brendapollagba.dev)**
+**[brendapollagba.dev](https://brendapollagba.dev)**
 
 </div>
 
 ---
 
-## ✦ À propos
+## ❀ A propos
 
-Portfolio personnel conçu et développé from scratch en HTML5, CSS3 et JavaScript vanilla — sans framework, sans dépendances.
+Portfolio personnel développé en HTML5, CSS3 et JavaScript vanilla.
 
----
-
-## ✦ Fonctionnalités
-
-- Thème clair / sombre avec persistance via `localStorage`
-- Switch de langue FR / EN avec persistance via `localStorage`
-- Sections chargées dynamiquement (About, Projets, Footer injectés dans `Home.html`)
-- Carousel de certifications et carousel de screenshots projets
-- Modale projets avec liens GitHub et déploiement
-- Téléchargement du CV
-- Design responsive (mobile → desktop)
-- Accessibilité : structure sémantique, `aria-label`, `aria-hidden`, navigation clavier
+Il présente mon profil, mon parcours, mes compétences, mes certifications, mes projets et mes liens de contact.
 
 ---
 
-## ✦ Stack
+## ❀ Fonctionnalités
 
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
+- Thème clair / sombre avec sauvegarde dans `localStorage`
+- Switch de langue français / anglais avec sauvegarde dans `localStorage`
+- Section "A propos" avec présentation, parcours et objectif
+- Liste des langages et technologies
+- Carousel de certifications
+- Grille de projets avec modale de détail
+- Carousel de screenshots dans les projets
+- Liens GitHub et liens de déploiement quand ils existent
+- Téléchargement du CV en français ou en anglais selon la langue choisie
+- Design responsive pour mobile, tablette et desktop
 
 ---
 
-## ✦ Structure du projet
+## ❀ Stack
 
-```
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
+
+---
+
+## ❀ Structure du projet
+
+```text
 Portfolio/
-├── Pages/
-│   ├── Home.html          # Page principale (point d'entrée)
-│   ├── About_me.html      # Section À propos
-│   ├── Project.html       # Section Projets
-│   └── Footer.html        # Footer
-├── Style/
-│   └── Style.css          # Styles globaux + dark theme + responsive
-├── Script/
-│   └── Srcript.js         # Script principal
+├── Index.html          # Page principale
+├── Style.css           # Styles, thème sombre et responsive
+├── Script.js           # Animations, thème, langue, modales et carousels
+├── README.md
 └── Media/
-    ├── PageLayout/        # Logo, backgrounds
-    ├── Technologies/      # Icônes technologies (Black/ White/)
-    ├── Projects/          # Screenshots des projets
-    ├── Certifications/    # Images des certifications
-    └── Curriculum/        # CV
+    ├── PageLayout/     # Logo, bannière et backgrounds
+    ├── Technologies/   # Icônes des technologies
+    ├── Projects/       # Screenshots des projets
+    ├── Certifications/ # Images des certifications
+    └── Curriculum/     # CV en français et en anglais
 ```
 
 ---
 
-## ✦ Architecture
+## ❀ Lancer le projet
 
-`Home.html` est la seule page chargée par le navigateur. Au chargement, le script récupère `About_me.html`, `Project.html` et `Footer.html` via `fetch()` et injecte leur contenu dans les placeholders correspondants.
+Le projet est statique. Il peut être ouvert directement dans un navigateur avec `Index.html`.
 
-Cela permet de modifier chaque section indépendamment sans toucher à la page principale.
-
-> ⚠️ Les `fetch()` nécessitent un serveur local (ex. [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)) — ouvrir `Home.html` directement depuis l'explorateur de fichiers ne fonctionnera pas.
-
----
-
-## ✦ Lancer le projet
+Pour un affichage plus proche d'un vrai site, il est aussi possible d'utiliser l'extension Live Server dans VS Code.
 
 ```bash
 git clone https://github.com/BreeVerse/Portfolio.git
 cd Portfolio
-# Ouvrir Pages/Home.html avec Live Server
 ```
+
+Puis ouvrir `Index.html`.
 
 ---
 
 <div align="center">
 
-Fait avec 🩷 par **Brenda Pollagba** · [brendapollagba.dev](https://brendapollagba.dev) · [LinkedIn](https://www.linkedin.com/in/brenda-pollagba) · [GitHub](https://github.com/BreeVerse)
+Fait avec coeur par **Brenda Pollagba** · [brendapollagba.dev](https://brendapollagba.dev) · [LinkedIn](https://www.linkedin.com/in/brenda-pollagba) · [GitHub](https://github.com/BreeVerse)
 
 </div>

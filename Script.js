@@ -1,7 +1,6 @@
 // ============================================================
 //  PORTFOLIO - SCRIPT PRINCIPAL
 //  Ce fichier gère toutes les fonctionnalités du portfolio :
-//  - Chargement dynamique des sections (About, Projets, Footer)
 //  - Animations au scroll
 //  - Thème clair / sombre
 //  - Switch de langue FR / EN
@@ -9,93 +8,6 @@
 //  - Carousel certifications
 //  - Modale projets avec carousel
 // ============================================================
-
-// ============================================================
-//  CHARGEMENT DES SECTIONS
-//  Les sections About, Projets et Footer sont dans des fichiers
-//  HTML séparés. On les charge et on les injecte dans la page.
-// ============================================================
-
-async function loadLayout() {
-  try {
-    const stripLiveServerInjection = (html) =>
-      html
-        .replace(
-          /<!--\s*Code injected by live-server\s*-->[\s\S]*?<\/script>/gi,
-          "",
-        )
-        .replace(
-          /<script>[\s\S]*?IsThisFirstTime_Log_From_LiveServer[\s\S]*?<\/script>/gi,
-          "",
-        );
-
-    // Charger les 3 fichiers HTML en même temps
-    const [footerRes, aboutRes, projectsRes] = await Promise.all([
-      fetch("/Pages/Footer.html"),
-      fetch("/Pages/About_me.html"),
-      fetch("/Pages/Project.html"),
-    ]);
-
-    if (!aboutRes.ok || !projectsRes.ok || !footerRes.ok) return;
-
-    // Helper : extrait le contenu d'une balise dans un fichier HTML
-    const extract = (html, selector) => {
-      const doc = new DOMParser().parseFromString(html, "text/html");
-      const el = doc.querySelector(selector);
-      return el ? (selector === "footer" ? el.outerHTML : el.innerHTML) : "";
-    };
-
-    // Injecter le contenu dans les placeholders de la page
-    const aboutHtml = stripLiveServerInjection(await aboutRes.text());
-    const projectsHtml = stripLiveServerInjection(await projectsRes.text());
-    const footerHtml = stripLiveServerInjection(await footerRes.text());
-
-    document.getElementById("about-placeholder").innerHTML = extract(
-      aboutHtml,
-      "main",
-    );
-    document.getElementById("projects-placeholder").innerHTML = extract(
-      projectsHtml,
-      "main",
-    );
-    document.getElementById("footer-placeholder").innerHTML = extract(
-      footerHtml,
-      "footer",
-    );
-  } catch (error) {
-    return;
-  }
-}
-
-// ============================================================
-//  ANIMATIONS AU SCROLL
-//  Les éléments partent invisibles (opacity:0 dans le CSS).
-//  Quand ils entrent dans l'écran → on ajoute la classe .visible.
-//  Quand ils ressortent par le bas → on retire .visible.
-// ============================================================
-
-function setupScrollAnimations() {
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
-        } else if (entry.boundingClientRect.top > 0) {
-          // Sorti par le bas = pas encore vu → on réinitialise
-          entry.target.classList.remove("visible");
-        }
-        // Sorti par le haut = déjà vu → on garde .visible
-      });
-    },
-    { threshold: 0.1, rootMargin: "0px 0px 100px 0px" },
-  );
-
-  document
-    .querySelectorAll(
-      ".about-card, .Languages, .tech-card, #projects h2:not(.modal-title), .project-square",
-    )
-    .forEach((el) => observer.observe(el));
-}
 
 // ============================================================
 //  THÈME CLAIR / SOMBRE
@@ -223,9 +135,55 @@ function changeLanguage(lang) {
 }
 
 // ============================================================
+//  ANIMATIONS AU SCROLL
+//  Les éléments partent invisibles (opacity:0 dans le CSS).
+//  Quand ils entrent dans l'écran → on ajoute la classe .visible.
+//  Quand ils ressortent par le bas → on retire .visible.
+// ============================================================
+
+function setupScrollAnimations() {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        } else if (entry.boundingClientRect.top > 0) {
+          // Sorti par le bas = pas encore vu → on réinitialise
+          entry.target.classList.remove("visible");
+        }
+        // Sorti par le haut = déjà vu → on garde .visible
+      });
+    },
+    { threshold: 0.1, rootMargin: "0px 0px 100px 0px" },
+  );
+
+  document
+    .querySelectorAll(
+      ".about-card, .Languages, .tech-card, #projects h2:not(.modal-title), .project-square",
+    )
+    .forEach((el) => observer.observe(el));
+}
+
+function setupScrollCue() {
+  const scrollCue = document.querySelector(".scroll-down");
+  if (!scrollCue) return;
+
+  function toggleScrollCue() {
+    scrollCue.classList.toggle("hidden", window.scrollY > 80);
+  }
+
+  scrollCue.addEventListener("click", () => {
+    scrollCue.classList.add("hidden");
+  });
+
+  window.addEventListener("scroll", toggleScrollCue, { passive: true });
+  toggleScrollCue();
+}
+
+// ============================================================
 //  IMAGES TECHNOLOGIES (clair / sombre)
-//  Chaque <img> a un data-light-src et un data-dark-src.
-//  On change la src selon le thème.
+//  Chaque <img> a un data-dark-src.
+//  On garde l'image claire d'origine, puis on change la src selon le thème.
 // ============================================================
 
 function switchTechImages(isDark) {
@@ -274,7 +232,7 @@ function setupCVDownload() {
           ? "Curriculum_Vitae_EN_2026.pdf"
           : "Curriculum_Vitae_FR_2026.pdf";
       const link = document.createElement("a");
-      link.href = `../Media/Curriculum/${file}`;
+      link.href = `Media/Curriculum/${file}`;
       link.download = "CV_Brenda_Pollagba.pdf";
       link.click();
     });
@@ -416,6 +374,7 @@ function setupProjectModal() {
   const descEl = modal.querySelector(".modal-desc");
   const githubEl = modal.querySelector(".modal-github");
   const deployEl = modal.querySelector(".modal-deploy");
+  const docsEl = modal.querySelector(".modal-docs");
   const closeBtn = modal.querySelector(".modal-close");
 
   if (
@@ -427,6 +386,8 @@ function setupProjectModal() {
     !tagsEl ||
     !descEl ||
     !githubEl ||
+    !deployEl ||
+    !docsEl ||
     !closeBtn
   )
     return;
@@ -434,7 +395,6 @@ function setupProjectModal() {
   let carousel = null;
 
   function fillModal(square) {
-    const lang = localStorage.getItem("selectedLang") || "fr";
     const images = (square.dataset.images || "").split(",").filter(Boolean);
     const tags = (square.dataset.tags || "")
       .split(",")
@@ -462,11 +422,14 @@ function setupProjectModal() {
       tagsEl.appendChild(span);
     });
 
-    // Liens GitHub et déploiement
+    // Liens GitHub, déploiement, documentation
     githubEl.href = square.dataset.github || "#";
     const deploy = square.dataset.deploy || "";
     deployEl?.setAttribute("href", deploy);
     if (deployEl) deployEl.style.display = deploy ? "" : "none";
+    const docs = square.dataset.docs || "";
+    docsEl?.setAttribute("href", docs);
+    if (docsEl) docsEl.style.display = docs ? "" : "none";
 
     // Construire le carousel
     track.innerHTML = "";
@@ -563,10 +526,10 @@ function setupProjectModal() {
 //  et on initialise toutes les fonctionnalités.
 // ============================================================
 
-document.addEventListener("DOMContentLoaded", async () => {
-  await loadLayout();
+document.addEventListener("DOMContentLoaded", () => {
   setupThemeSwitch();
   setupLanguageSwitch();
+  setupScrollCue();
   setupCVDownload();
   applyProjectBackgrounds();
   setupProjectModal();

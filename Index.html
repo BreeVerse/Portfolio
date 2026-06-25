@@ -1,0 +1,885 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="Media/PageLayout/LogoBlanc.webp"
+    />
+    <title>Brenda - Développeuse Web Full-Stack | Portfolio</title>
+    <meta
+      name="description"
+      content="Portfolio de Brenda, développeuse web full-stack formée à Holberton School. Spécialisée en JavaScript, Python, React, Django."
+    />
+    <meta
+      name="keywords"
+      content="développeuse web, full-stack, JavaScript, Python, React, Django, cybersécurité, portfolio, Holberton School"
+    />
+    <meta name="author" content="Brenda Pollagba" />
+
+    <meta property="og:title" content="Brenda - Développeuse Web Full-Stack" />
+    <meta
+      property="og:description"
+      content="Portfolio de Brenda, développeuse web junior full-stack"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://Brendapollagba.dev" />
+    <meta
+      property="og:image"
+      content="https://Brendapollagba.dev/Media/PageLayout/Banner.png"
+    />
+    <!-- Fichier principal en racine : utiliser des chemins relatifs depuis / -->
+    <link rel="stylesheet" href="Style.css" />
+  </head>
+
+  <body>
+    <!-- CONTENU DE LA PAGE HOME -->
+    <main>
+      <section id="hero">
+        <!-- Barre supérieure -->
+        <div class="hero-banner">
+          <h2 class="hero-label" data-lang="hero-label">
+            Développeuse Web Full-Stack
+          </h2>
+          <div class="switch-container">
+            <label
+              class="switch lang-switch"
+              aria-label="Changer la langue entre français et anglais"
+            >
+              <input type="checkbox" id="LanguageSwitch" />
+              <span class="slider">
+                <span class="lang-fr">FR</span>
+                <span class="lang-en">EN</span>
+              </span>
+            </label>
+            <label
+              class="switch theme-switch"
+              aria-label="Basculer entre thème clair et sombre"
+            >
+              <input type="checkbox" id="ThemeSwitch" />
+              <span class="slider">
+                <svg
+                  class="sun-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <circle cx="12" cy="12" r="4" />
+                  <path d="M12 2v2" />
+                  <path d="M12 20v2" />
+                  <path d="m4.93 4.93 1.41 1.41" />
+                  <path d="m17.66 17.66 1.41 1.41" />
+                  <path d="M2 12h2" />
+                  <path d="M20 12h2" />
+                  <path d="m6.34 17.66-1.41 1.41" />
+                  <path d="m19.07 4.93-1.41 1.41" />
+                </svg>
+                <svg
+                  class="moon-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"
+                  />
+                </svg>
+              </span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Informations principales au centre -->
+        <div class="hero-center">
+          <!-- Étoiles décoratives -->
+          <span class="sparkle sparkle-1" aria-hidden="true">✦</span>
+          <span class="sparkle sparkle-2" aria-hidden="true">✦</span>
+          <span class="sparkle sparkle-3" aria-hidden="true">✦</span>
+          <span class="sparkle sparkle-4" aria-hidden="true">✦</span>
+          <span class="sparkle sparkle-5" aria-hidden="true">✦</span>
+
+          <!-- Titre principal -->
+          <div class="hero-title-wrapper">
+            <h1 class="hero-title">portfolio</h1>
+            <div class="hero-name" aria-hidden="true">Brenda Pollagba</div>
+          </div>
+        </div>
+
+        <!-- Barre sociale -->
+        <div class="hero-bottom" role="list">
+          <a
+            href="https://www.linkedin.com/in/brenda-pollagba"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="hero-social"
+            aria-label="LinkedIn de Brenda (s'ouvre dans un nouvel onglet)"
+            role="listitem"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+              />
+            </svg>
+            <span>Brenda Pollagba</span>
+          </a>
+          <a
+            href="mailto:brendapollagba@gmail.com"
+            class="hero-social"
+            aria-label="Envoyer un email à Brenda"
+            role="listitem"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <rect width="20" height="16" x="2" y="4" rx="2" />
+              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+            </svg>
+            <span>brendapollagba@gmail.com</span>
+          </a>
+          <a
+            href="https://github.com/BreeVerse"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="hero-social"
+            aria-label="GitHub de Brenda (s'ouvre dans un nouvel onglet)"
+            role="listitem"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
+              />
+            </svg>
+            <span>BreeVerse</span>
+          </a>
+          <a
+            href="#"
+            id="hero-cv-button"
+            class="hero-social"
+            aria-label="Télécharger le CV de Brenda"
+            role="listitem"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path
+                d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"
+              />
+              <polyline points="14 2 14 8 20 8" />
+              <path d="M12 18v-6" />
+              <path d="m9 15 3 3 3-3" />
+            </svg>
+            <span data-lang="cv-download">Mon CV</span>
+          </a>
+        </div>
+
+        <a
+          href="#about"
+          class="scroll-down"
+          aria-label="Descendre vers la section À propos"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="22"
+            height="22"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path d="M12 5v14" />
+            <path d="m19 12-7 7-7-7" />
+          </svg>
+        </a>
+      </section>
+
+      <!-- Section about me -->
+      <section id="about">
+        <div class="about-card">
+          <h2 class="about-title" data-lang="about-title">À propos de moi</h2>
+          <p class="about-text" data-lang="about-text">
+            Bonjour, moi c'est Brenda, développeuse web passionnée par les
+            interfaces qui donnent le sourire. Je crois que le web doit être
+            aussi beau qu'il est fonctionnel, et c'est cette conviction qui
+            guide chaque projet que je construis. En dehors du code, je suis une
+            grande fan de catch, d'animés et de culture japonaise.
+          </p>
+        </div>
+        <div class="about-card">
+          <h2 class="about-title" data-lang="parcours-title">Mon parcours</h2>
+          <p class="about-text" data-lang="about-skills">
+            Formée à
+            <a
+              href="https://www.holbertonschool.fr/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="holberton-link"
+              aria-label="Site web de Holberton School (s'ouvre dans un nouvel onglet)"
+              >Holberton School</a
+            >, j'ai développé des compétences solides en développement fullstack
+            : React, Node.js, Express, PostgreSQL, et je développe en ce moment
+            Irokami, une application de prise de notes intelligente avec
+            génération automatique de quiz et flashcards via l'IA.
+          </p>
+          <button
+            class="certif-btn hero-social"
+            id="open-certif-modal"
+            data-lang="certif-btn"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <circle cx="12" cy="8" r="6" />
+              <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11" />
+            </svg>
+            Voir mes certifications
+          </button>
+        </div>
+        <div class="about-card">
+          <h2 class="about-title" data-lang="objective-title">Mon objectif</h2>
+          <p class="about-text" data-lang="about-objective">
+            Je recherche un stage ou une alternance en développement web pour
+            continuer à progresser sur des projets concrets. À plus long terme,
+            mon ambition est d'évoluer vers la cybersécurité et de me
+            spécialiser en sécurité applicative.
+          </p>
+          <div class="availability-banner">
+            <div class="availability-item">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+              <span data-lang="availability-location"
+                >Toulouse · Tours · Montauban</span
+              >
+            </div>
+            <div class="availability-item">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <rect width="18" height="18" x="3" y="4" rx="2" />
+                <path d="M16 2v4M8 2v4M3 10h18" />
+              </svg>
+              <span data-lang="availability-date"
+                >Disponible dès maintenant</span
+              >
+            </div>
+            <div class="availability-item">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M17 2l4 4-4 4" />
+                <path d="M3 11V9a4 4 0 0 1 4-4h14" />
+                <path d="M7 22l-4-4 4-4" />
+                <path d="M21 13v2a4 4 0 0 1-4 4H3" />
+              </svg>
+              <span data-lang="availability-rhythm"
+                >Alternance à partir de septembre : 3 sem. entreprise / 1 sem.
+                école</span
+              >
+            </div>
+          </div>
+        </div>
+        <div class="Languages">
+          <h2 data-lang="tech-title">Langages et technologies</h2>
+          <div class="technologies">
+            <div class="tech-card">
+              <img
+                src="Media/Technologies/Black/linux.png"
+                data-dark-src="Media/Technologies/White/linux.webp"
+                alt=""
+                aria-hidden="true"
+              />
+              <p class="tech-label">Linux</p>
+            </div>
+            <div class="tech-card">
+              <img
+                src="Media/Technologies/Black/git.png"
+                data-dark-src="Media/Technologies/White/git.webp"
+                alt=""
+                aria-hidden="true"
+              />
+              <p class="tech-label">Git</p>
+            </div>
+            <div class="tech-card">
+              <img
+                src="Media/Technologies/Black/github.png"
+                data-dark-src="Media/Technologies/White/github.webp"
+                alt=""
+                aria-hidden="true"
+              />
+              <p class="tech-label">GitHub</p>
+            </div>
+            <div class="tech-card">
+              <img
+                src="Media/Technologies/Black/vscode.png"
+                data-dark-src="Media/Technologies/White/vscode.webp"
+                alt=""
+                aria-hidden="true"
+              />
+              <p class="tech-label">VSCode</p>
+            </div>
+            <div class="tech-card">
+              <img
+                src="Media/Technologies/Black/postman.png"
+                data-dark-src="Media/Technologies/White/postman.webp"
+                alt=""
+                aria-hidden="true"
+              />
+              <p class="tech-label">Postman</p>
+            </div>
+            <div class="tech-card">
+              <img
+                src="Media/Technologies/Black/javascript.png"
+                data-dark-src="Media/Technologies/White/javascript.webp"
+                alt=""
+                aria-hidden="true"
+              />
+              <p class="tech-label">JavaScript</p>
+            </div>
+            <div class="tech-card">
+              <img
+                src="Media/Technologies/Black/nodejs.png"
+                data-dark-src="Media/Technologies/White/nodejs.png"
+                alt=""
+                aria-hidden="true"
+              />
+              <p class="tech-label">Node.js</p>
+            </div>
+            <div class="tech-card">
+              <img
+                src="Media/Technologies/Black/react.png"
+                data-dark-src="Media/Technologies/White/react.webp"
+                alt=""
+                aria-hidden="true"
+              />
+              <p class="tech-label">React</p>
+            </div>
+            <div class="tech-card">
+              <img
+                src="Media/Technologies/Black/html.png"
+                data-dark-src="Media/Technologies/White/html.webp"
+                alt=""
+                aria-hidden="true"
+              />
+              <p class="tech-label">HTML5</p>
+            </div>
+            <div class="tech-card">
+              <img
+                src="Media/Technologies/Black/css.png"
+                data-dark-src="Media/Technologies/White/css.webp"
+                alt=""
+                aria-hidden="true"
+              />
+              <p class="tech-label">CSS3</p>
+            </div>
+            <div class="tech-card">
+              <img
+                src="Media/Technologies/Black/tailwind.png"
+                data-dark-src="Media/Technologies/White/tailwind.png"
+                alt=""
+                aria-hidden="true"
+              />
+              <p class="tech-label">Tailwind CSS</p>
+            </div>
+            <div class="tech-card">
+              <img
+                src="Media/Technologies/Black/prisma.png"
+                data-dark-src="Media/Technologies/White/prisma.png"
+                alt=""
+                aria-hidden="true"
+              />
+              <p class="tech-label">Prisma</p>
+            </div>
+            <div class="tech-card">
+              <img
+                src="Media/Technologies/Black/postgresql.png"
+                data-dark-src="Media/Technologies/White/postgresql.png"
+                alt=""
+                aria-hidden="true"
+              />
+              <p class="tech-label">PostgreSQL</p>
+            </div>
+            <div class="tech-card">
+              <img
+                src="Media/Technologies/Black/supabase.png"
+                data-dark-src="Media/Technologies/White/supabase.png"
+                alt=""
+                aria-hidden="true"
+              />
+              <p class="tech-label">Supabase</p>
+            </div>
+            <div class="tech-card">
+              <img
+                src="Media/Technologies/Black/zustand.png"
+                data-dark-src="Media/Technologies/White/zustand.png"
+                alt=""
+                aria-hidden="true"
+              />
+              <p class="tech-label">Zustand</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Modale Certifications -->
+      <div
+        id="certif-modal"
+        class="modal-overlay hidden-modal"
+        aria-modal="true"
+        role="dialog"
+        aria-label="Certifications"
+      >
+        <div class="modal-box certif-modal-box">
+          <button class="modal-close" aria-label="Fermer">✕</button>
+          <h2 class="modal-title certif-modal-title" data-lang="certif-title">
+            Certifications
+          </h2>
+          <div class="certif-carousel">
+            <div class="certif-carousel-wrapper">
+              <button class="carousel-btn certif-prev" aria-label="Précédent">
+                &#8249;
+              </button>
+              <div class="certif-carousel-track">
+                <div class="certif-slide">
+                  <img
+                    src="Media/Certifications/certificate-agile.png"
+                    alt="Agile"
+                  />
+                  <p data-lang="certif-agile">Agile</p>
+                </div>
+                <div class="certif-slide">
+                  <img
+                    src="Media/Certifications/certificate-cloud.png"
+                    alt="Cloud"
+                  />
+                  <p data-lang="certif-cloud">Cloud</p>
+                </div>
+                <div class="certif-slide">
+                  <img
+                    src="Media/Certifications/certificate-cyber-1.png"
+                    alt="Cybersécurité"
+                  />
+                  <p data-lang="certif-cyber">Cybersécurité</p>
+                </div>
+                <div class="certif-slide">
+                  <img
+                    src="Media/Certifications/certificate-oss.png"
+                    alt="Open Source"
+                  />
+                  <p data-lang="certif-oss">Open Source</p>
+                </div>
+                <div class="certif-slide">
+                  <img
+                    src="Media/Certifications/certificate-project-management-1.png"
+                    alt="Gestion de projet"
+                  />
+                  <p data-lang="certif-pm">Gestion de projet</p>
+                </div>
+                <div class="certif-slide">
+                  <img
+                    src="Media/Certifications/certificate-sql.png"
+                    alt="SQL"
+                  />
+                  <p data-lang="certif-sql">SQL</p>
+                </div>
+              </div>
+              <button class="carousel-btn certif-next" aria-label="Suivant">
+                &#8250;
+              </button>
+            </div>
+            <div class="certif-dots"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section projets -->
+      <!-- Les cartes projets deviennent visibles via la classe .visible ajoutée par JS -->
+      <section id="projects">
+        <h2 data-lang="projects-title">Mes projets</h2>
+        <div class="projects-grid">
+          <div
+            class="project-square"
+            data-desc-key="project-irokami"
+            data-tags="React, TailwindCSS, Node.js, Express, PostgreSQL, Prisma, JWT"
+            data-github="https://github.com/BreeVerse/Irokami"
+            data-deploy="https://irokami.vercel.app/"
+            data-docs="https://canva.link/er3esuvho5vrzav"
+            data-gradient="linear-gradient(135deg, #a5f3fc, #0891b2)"
+            data-images="Media/Projects/Irokami/Irokami_1.png,Media/Projects/Irokami/Irokami_2.png,Media/Projects/Irokami/Irokami_3.png"
+            role="button"
+            tabindex="0"
+            aria-label="Ouvrir le projet Irokami"
+          >
+            <div class="project-square-label" data-lang="project-irokami-title">
+              Irokami
+            </div>
+            <div class="project-square-year">2026</div>
+            <div class="project-square-hover">
+              <span>Ouvrir <span aria-hidden="true">↗</span></span>
+            </div>
+          </div>
+
+          <div
+            class="project-square"
+            data-desc-key="project-portfolio"
+            data-tags="HTML5, CSS3, JavaScript"
+            data-github="https://github.com/BreeVerse/Portfolio.git"
+            data-gradient="linear-gradient(135deg, #ffb3d9, #ff6eb4)"
+            data-images="Media/Projects/Portfolio/Portfolio_1.png,Media/Projects/Portfolio/Portfolio_2.png,Media/Projects/Portfolio/Portfolio_3.png"
+            role="button"
+            tabindex="0"
+            aria-label="Ouvrir le projet Portfolio Personnel"
+          >
+            <div
+              class="project-square-label"
+              data-lang="project-portfolio-title"
+            >
+              Portfolio Personnel
+            </div>
+            <div class="project-square-year">2025 – 2026</div>
+            <div class="project-square-hover">
+              <span>Ouvrir <span aria-hidden="true">↗</span></span>
+            </div>
+          </div>
+
+          <div
+            class="project-square"
+            data-desc-key="project-athlia"
+            data-tags="React.js, Three.js, Django, PostgreSQL, WebSockets"
+            data-github="https://github.com/Knarta/Athlia_landing_page.git"
+            data-gradient="linear-gradient(135deg, #c084fc, #7c3aed)"
+            data-images="Media/Projects/Athlia/Athlia_1.png,Media/Projects/Athlia/Athlia_2.png,Media/Projects/Athlia/Athlia_3.png,Media/Projects/Athlia/Athlia_4.png"
+            role="button"
+            tabindex="0"
+            aria-label="Ouvrir le projet Athlia"
+          >
+            <div class="project-square-label" data-lang="project-athlia-title">
+              Athlia
+            </div>
+            <div class="project-square-year">2025</div>
+            <div class="project-square-hover">
+              <span>Ouvrir <span aria-hidden="true">↗</span></span>
+            </div>
+          </div>
+
+          <div
+            class="project-square"
+            data-desc-key="project-hbnb"
+            data-tags="Python, Flask, SQLAlchemy, MySQL, HTML5, CSS3, JavaScript"
+            data-github="https://github.com/BreeVerse/holbertonschool-hbnb.git"
+            data-gradient="linear-gradient(135deg, #5eead4, #0d9488)"
+            data-images="Media/Projects/HBNB/HBNB_1.png,Media/Projects/HBNB/HBNB_2.png,Media/Projects/HBNB/HBNB_3.png,Media/Projects/HBNB/HBNB_4.png"
+            role="button"
+            tabindex="0"
+            aria-label="Ouvrir le projet HBnB"
+          >
+            <div class="project-square-label" data-lang="project-hbnb-title">
+              HBnB (Airbnb Clone)
+            </div>
+            <div class="project-square-year">2025</div>
+            <div class="project-square-hover">
+              <span>Ouvrir <span aria-hidden="true">↗</span></span>
+            </div>
+          </div>
+
+          <div
+            class="project-square"
+            data-desc-key="project-compliments"
+            data-tags="HTML5, CSS3, JavaScript"
+            data-github="https://github.com/BreeVerse/Compliment-Generator.git"
+            data-gradient="linear-gradient(135deg, #fdba74, #ea580c)"
+            data-images="Media/Projects/Generateur_Compliment/Generateur_1.png,Media/Projects/Generateur_Compliment/Generateur_2.png"
+            role="button"
+            tabindex="0"
+            aria-label="Ouvrir le projet Générateur de Compliments"
+          >
+            <div
+              class="project-square-label"
+              data-lang="project-compliments-title"
+            >
+              Générateur de Compliments
+            </div>
+            <div class="project-square-year">2025</div>
+            <div class="project-square-hover">
+              <span>Ouvrir <span aria-hidden="true">↗</span></span>
+            </div>
+          </div>
+
+          <div
+            class="project-square"
+            data-desc-key="project-shell"
+            data-tags="C, fork(), execve(), pipes"
+            data-github="https://github.com/BreeVerse/holbertonschool-simple_shell.git"
+            data-gradient="linear-gradient(135deg, #94a3b8, #475569)"
+            data-images=""
+            role="button"
+            tabindex="0"
+            aria-label="Ouvrir le projet Shell en C"
+          >
+            <div class="project-square-label" data-lang="project-shell-title">
+              Shell en C
+            </div>
+            <div class="project-square-year">2024</div>
+            <div class="project-square-hover">
+              <span>Ouvrir <span aria-hidden="true">↗</span></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Descriptions cachées pour la modale (traduites par le système FR/EN) -->
+        <div class="sr-only" aria-hidden="true">
+          <span data-lang="project-irokami">
+            Projet solo visant à créer une application fullstack de prise de
+            notes intelligente. Permet de créer des notes enrichies et de
+            générer automatiquement des quiz, flashcards et résumés grâce à
+            l'API Gemini. Le frontend est développé avec React, TailwindCSS,
+            TipTap, Zustand, TanStack Query et Framer Motion. Le backend repose
+            sur Node.js/Express avec PostgreSQL via Prisma et une
+            authentification JWT. Déployé en production sur Railway et Vercel.
+          </span>
+          <span data-lang="project-portfolio"
+            >Projet solo de 6 semaines visant à créer un portfolio personnel
+            pour présenter mes compétences et projets en développement web.
+            Construit en HTML5, CSS3 et JavaScript, il intègre un système de
+            thèmes (mode clair/sombre), un switch de langue (FR/EN) avec
+            persistance via localStorage, et une mise en page structurée avec
+            sections dédiées.</span
+          >
+          <span data-lang="project-athlia"
+            >Projet de fin d'année en groupe de 3 personnes sur 1 mois et demi
+            pour créer une application fitness avec interface 3D interactive. Le
+            front-end est développé avec React.js et Three.js pour la
+            modélisation 3D des exercices. Le back-end repose sur Django avec
+            PostgreSQL et une architecture en trois couches. L'application
+            intègre des données dynamiques en temps réel via WebSockets.</span
+          >
+          <span data-lang="project-hbnb"
+            >Projet de groupe de 3 personnes sur 6 semaines pour créer un clone
+            d'Airbnb avec interface web et API RESTful. Le back-end est
+            développé en Python avec Flask et SQLAlchemy pour la gestion de la
+            base de données MySQL. Le front-end est développé avec HTML5, CSS3
+            et JavaScript avec des fonctionnalités avancées comme des
+            formulaires interactifs et des modales de détail.</span
+          >
+          <span data-lang="project-compliments"
+            >Projet solo d'1 semaine pour créer une application web simple et
+            interactive. Développé avec HTML5, CSS3 et JavaScript pour la
+            logique de génération aléatoire de compliments. L'interface inclut
+            un background animé et une musique de fond pour améliorer
+            l'expérience utilisateur.</span
+          >
+          <span data-lang="project-shell"
+            >Projet en duo de 2 semaines pour créer un mini-shell en C.
+            Développement d'un interpréteur de commandes capable d'exécuter des
+            commandes système de façon interactive. Gestion des commandes
+            internes (cd, exit) et externes, redirections et pipes. Création de
+            processus fils via fork() et exécution de commandes avec execve().
+            Gestion des signaux (Ctrl+C) et optimisation de la mémoire.</span
+          >
+        </div>
+
+        <!-- Modale Projets -->
+        <div
+          id="project-modal"
+          class="modal-overlay hidden-modal"
+          aria-modal="true"
+          role="dialog"
+          aria-label="Détail du projet"
+        >
+          <div class="modal-box">
+            <button class="modal-close" aria-label="Fermer">✕</button>
+            <div class="modal-body">
+              <div class="modal-carousel">
+                <div class="modal-carousel-track"></div>
+                <button class="carousel-btn modal-prev" aria-label="Précédent">
+                  &#8249;
+                </button>
+                <button class="carousel-btn modal-next" aria-label="Suivant">
+                  &#8250;
+                </button>
+                <div class="modal-carousel-dots"></div>
+              </div>
+              <div class="modal-info">
+                <h2 class="modal-title"></h2>
+                <div class="modal-tags"></div>
+                <p class="modal-desc"></p>
+                <div class="modal-actions">
+                  <a
+                    class="modal-github hero-social"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img
+                      src="Media/Technologies/Black/github.png"
+                      data-dark-src="Media/Technologies/White/github.webp"
+                      alt="GitHub"
+                    />
+                    <span>Voir sur GitHub</span>
+                  </a>
+                  <a
+                    class="modal-deploy hero-social"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style="display: none"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                      />
+                      <polyline points="15 3 21 3 21 9" />
+                      <line x1="10" y1="14" x2="21" y2="3" />
+                    </svg>
+                    <span>Voir le site</span>
+                  </a>
+                  <a
+                    class="modal-docs hero-social"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style="display: none"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z"
+                      />
+                      <polyline points="14 2 14 8 20 8" />
+                      <line x1="16" y1="13" x2="8" y2="13" />
+                      <line x1="16" y1="17" x2="8" y2="17" />
+                      <line x1="10" y1="9" x2="8" y2="9" />
+                    </svg>
+                    <span>Voir la documentation</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-credits">
+        <p data-lang="footer-realisation">
+          Site réalisé par
+          <strong>Brenda Pollagba</strong> &copy; 2026
+        </p>
+        <p class="footer-text" data-lang="footer-credits">
+          Icônes : icons8.fr • Background : Canva/Brenda
+        </p>
+      </div>
+    </footer>
+
+    <!-- Script principal : anime les sections, thèmes, langue et modales -->
+    <script type="module" src="Script.js"></script>
+  </body>
+</html>
