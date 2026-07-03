@@ -1081,6 +1081,10 @@ body.dark-theme .theme-switch .slider .moon-icon {
 }
 
 body.dark-theme .hero-name {
+  color: #ffcff5;
+}
+
+body.dark-theme .hero-title {
   color: #f0eaf8;
 }
 
